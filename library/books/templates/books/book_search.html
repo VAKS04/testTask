@@ -1,0 +1,26 @@
+{%extends "books/base.html"%}
+
+{%block content%}
+<h2>Поиск Книги по :</h2>
+<form action="{%url 'book_search'%}" method="get">
+    <div class="label-container">
+        <label>Названию : </label>
+        <input type="text" name="title" id="title">
+    </div>
+    <div class="label-container">
+        <label>Автору : </label>
+        <input type="text" name="author" id="author">
+    </div>
+    <div class="label-container">
+        <label for="">Год выпуска : </label>
+        <input type="number" name="year" id="year">
+    </div>
+
+    <button type="submit">Поиск</button>
+</form>
+
+{%for i in books%}
+<p>{{i}}
+{%endfor%}
+
+{%endblock%}

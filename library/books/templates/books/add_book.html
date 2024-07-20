@@ -1,0 +1,30 @@
+{%extends 'books/base.html'%}
+
+{%block content%}
+
+
+<form method="post" action="{%url 'add_book'%}">
+    {%csrf_token%}
+    {{form.as_p}}
+    <button type="submit">Создать</button>
+</form>
+<!-- <form action="POST">
+    <div class="label-block">
+        <label for="">Название книги</label>
+        <input type="text">
+    </div>
+    <div class="label-block">
+        <label for="">Автор</label>
+        <input type="text">
+    </div>
+    <div class="label-block">
+        <label for="">Год издания</label>
+        <input type="text">
+    </div>
+    <div class="label-block">
+        <label for="">Статус</label>
+        <input type="text">
+    </div>
+    <button>Создать</button>
+</form> -->
+{%endblock%}

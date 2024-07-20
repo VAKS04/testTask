@@ -1,0 +1,8 @@
+{%extends "books/base.html"%}
+
+{%block content%}
+<h2>Выберите книгу у которой хотите изменить статус</h2>
+{%for i in books%}
+<p><a href="{%url 'change_status_page' i.pk%}">{{i}}</a></p>
+{%endfor%}
+{%endblock%}

@@ -1,0 +1,15 @@
+{%extends "books/base.html"%}
+
+
+{%block content%}
+<h2>Укажите номер книги для удаления</h2>
+<form action="{%url 'delete_book'%}" method="post">
+    {%csrf_token%}
+    <label>id :</label>
+    <input type="number" name="id" id="id">
+    <button type="submit">Удалить</button>
+</form>
+{%for i in books%}
+<p>{{i}}
+{%endfor%}
+{%endblock%}
